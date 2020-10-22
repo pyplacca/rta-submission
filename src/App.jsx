@@ -1,10 +1,17 @@
 import React from 'react';
-import './App.css';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import { DiagnosisForm, Report } from 'components/pages';
+import 'static/css/global.css';
+
 
 function App() {
 	return (
-		<div className="App">
-		</div>
+		<BrowserRouter>
+			<Switch>
+				<Route exact path="/report" component={Report} />
+				<Route path="/" component={DiagnosisForm} />
+			</Switch>
+		</BrowserRouter>
 	);
 }
 
