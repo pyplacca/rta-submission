@@ -1,0 +1,82 @@
+:root {
+	--gap: .5rem;
+	--gap-x2: calc(var(--gap) * 2);
+	--gap-x3: calc(var(--gap) * 3);
+	--pill-bg: #e3eaef;
+	--fg-primary: #bebbc1;
+	--sea-green: #02c0ce;
+	--sea-green-2: #06d0f2;
+	--bg1: #f7f5ff;
+	--input-bg2: #ede9f1;
+	--radius: 6px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-family: 'Open Sans';
+}
+
+p {
+	font-weight: 300;
+}
+
+.text-large {
+	font-weight: 700;
+}
+
+.text-medium {
+	font-weight: 400;
+}
+
+.text-normal {
+}
+
+.flex,
+.flex-rr,
+.flex-c,
+.flex-cr {
+	display: flex;
+}
+
+.flex-rr {
+	flex-direction: row-reverse;
+}
+
+.flex-c {
+	flex-direction: column;
+}
+
+.flex-cr {
+	flex-direction: column-reverse;
+}
+
+.aic {
+	align-items: center;
+}
+
+.ail {
+	align-items: ;
+}
+
+.jcc {
+	justify-content: center;
+}
+
+.jcsb {
+	justify-content: space-between;
+}
+
+.Panel {
+	background-color: #fff;
+}
