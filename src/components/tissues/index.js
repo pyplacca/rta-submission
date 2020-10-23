@@ -1,9 +1,9 @@
 import Pill from './Pill';
-import ReportHeader from './ReportHeader';
+import PageNav from './Navigation';
 import Table from './Table';
 
 export {
 	Pill,
-	ReportHeader,
+	PageNav,
 	Table,
 }
