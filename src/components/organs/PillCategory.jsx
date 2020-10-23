@@ -2,13 +2,17 @@ import React from 'react';
 import { Pill } from 'components/tissues'
 
 
-function PillCategory ({caption, items, children}) {
+function PillCategory ({caption, diseases, children}) {
 	return (
 		<div className="pill-category">
 			<h5 className="caption">{caption}</h5>
 			{
-				items.map(
-					(disease, i) => <Pill name={disease} key={i}/>
+				diseases.map((disease, i) =>
+					<Pill
+						name={disease[0]}
+						accessName={disease[1]}
+						key={i}
+					/>
 				)
 			}
 			{children}
