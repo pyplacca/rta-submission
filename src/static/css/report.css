@@ -1,0 +1,165 @@
+.Report button[name="edit"] {
+	background-color: #fff;
+	color: blue;
+	align-self: center
+}
+
+.Report button[name="print"] {
+	background-color: #000;
+	color: #fff;
+}
+
+.Report section {
+	margin: var(--gap-x3) calc(var(--gap-x3) * 3);
+	margin-bottom: 0;
+}
+
+.Report .extra-data > *:first-child {
+	margin-bottom: var(--gap);
+}
+
+.Report .extra-data > *:last-child {
+	color: var(--fg-primary);
+}
+
+
+/* ===================================== */
+
+.Report .page-main {
+}
+
+.Report .page-main .header {
+	height: 35vh;
+	background-image: linear-gradient(
+		87deg,
+		#11cdef 0,
+		#1171ef 100%
+	);
+	padding: 0 3.5%;
+	align-items: start;
+}
+
+.Report .page-main .header button {
+	margin-right: var(--gap-x3);
+}
+
+.Report .page-main .short-info {
+	color: #fff;
+}
+
+.Report .page-main .short-info .title {
+	margin-top: 21%;
+}
+
+.Report .page-main .short-info .subtitle {
+	margin-top: 7%;
+}
+
+.Report .page-main .page-information {
+	position: relative;
+	top: -80px;
+	max-width: var(--mxw);
+	margin: auto;
+	background-color: #fff;
+}
+
+.Report .page-main .page-information .tabs {
+	--pad: var(--gap-x2);
+	padding: var(--pad) 0;
+	margin: var(--gap-x3) calc(var(--gap-x3) * 2);
+	margin-top: 0;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.Report .page-main .page-information .tabs .tab {
+	position: relative;
+	cursor: pointer;
+	padding: 0 var(--gap-x2);
+}
+
+.Report .page-main .page-information .tabs .tab:hover::after {
+	width: 40%;
+}
+
+.Report .page-main .page-information .tabs .tab::after {
+	content: "";
+	position: absolute;
+	top: calc(100% + var(--pad));
+	left: 0;
+	width: 0%;
+	height: 2px;
+	background-color: #000;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+
+.Report .page-main .page-information .tabs .tab.active::after {
+	width: 100%;
+}
+
+.Report .page-main .page-information button[name="print"] {
+	margin-left: auto;
+	margin-right: 7%;
+}
+
+.Report .page-information section#personal-info {
+	border-bottom: 1px solid #d2d2d2
+}
+
+.Report .page-information section .section-header {
+	margin-bottom: var(--gap-x3)
+}
+
+.Report .page-information section#personal-info .details {
+	padding: var(--gap-x3);
+	margin-bottom: calc(var(--gap-x3) * 2);
+	display: grid;
+	/*grid-template-columns: repeat(3, 300px);*/
+	grid-template-columns: repeat(3, 1fr);
+	grid-row-gap: var(--gap-x3);
+	/*grid-gap: */
+
+}
+
+.Report .page-information table {
+	width: 100%;
+	border-collapse: collapse;
+	border-radius: var(--radius);
+	overflow: hidden;
+	box-shadow: 0 0 6px var(--pill-bg)
+}
+
+.Report .page-information table thead tr:not(.cap) {
+	background-color: #f8f7fc;
+}
+
+.Report .page-information table thead tr.cap th {
+	height: 3rem;
+	background-color: #fff;
+	border-bottom: 1px solid var(--pill-bg);
+}
+.Report .page-information table thead th {
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: .9rem;
+	color: var(--fg-primary);
+	padding: var(--gap-x2);
+}
+
+.Report .page-information table tbody tr:not(:last-child) {
+	border-bottom: 1px solid var(--bg1);
+}
+
+.Report .page-information table tbody td {
+	padding: var(--gap-x2) var(--gap-x3);
+}
+
+.Report .page-information section#medical-info .bottom-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin: var(--gap-x3);
+	padding: var(--gap-x3) 0;
+}
