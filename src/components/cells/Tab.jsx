@@ -1,10 +1,19 @@
 import React from 'react';
 
 
-function Tab ({name, className}) {
+function Tab (props) {
+	const {text, className, icon, clickCallback, ...other} = props;
+
 	return (
-		<div className={"tab " + (className || '')}>
-			{name}
+		<div
+			className={"tab " + (className || "")}
+			onClick={() => {clickCallback(props.name)}}
+			{...other}
+		>
+			<p className={"text-medium" + (icon ? " flex aic" : "")}>
+				{icon ? icon : null}
+				{text}
+			</p>
 		</div>
 	)
 };
