@@ -1,21 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Field } from 'components/cells';
 
 
 class Pill extends React.Component {
+
 	constructor (props) {
 		super(props);
 
 		this.state = {
 			collapsed: true,
 			status: 'No',
-			// diagnosisType: null,
-			// medication: null,
-			// diagnosisYear: null
 		};
 
-		this.handleChange = this.handleChange.bind(this)
 		this.toggleCollapse = this.toggleCollapse.bind(this)
 	};
 
@@ -25,18 +21,10 @@ class Pill extends React.Component {
 		})
 	};
 
-	handleChange ({target}) {
-		const {name, value} = target
-		this.setState({
-			[name]: value
-		});
-	};
-
 	render () {
-		const {name} = this.props,
-		{collapsed, status} = this.state,
-		disabled = status === 'No',
-		inputName = name.replace(/\s/g, '-').toLowerCase()
+		const {name, accessName} = this.props,
+			{collapsed, status} = this.state,
+			disabled = status === 'No';
 
 		return (
 			<div className="disease collapsible">
@@ -53,10 +41,14 @@ class Pill extends React.Component {
 				>
 					<Field label="Status*">
 						<select
-							name="status"
-							id={inputName + "-status"}
+							// name="status"
+							name={accessName + "-status"}
 							value={this.state.status}
-							onChange={this.handleChange}
+							onChange={
+								({target}) => this.setState({
+									status: target.value
+								})
+							}
 						>
 							<option value="Yes">Yes</option>
 							<option value="No">No</option>
@@ -65,15 +57,14 @@ class Pill extends React.Component {
 
 					<Field label="Year of diagnosis">
 						<input
-							id={inputName + "-diagnosisYear"}
+							name={accessName + "-diagnosisYear"}
 							type="text"
-							disabled={disabled}
 						/>
 					</Field>
 
 					<Field label="Diagnosis Type">
 						<input
-							id={inputName + "-diagnosisType"}
+							name={accessName + "-diagnosisType"}
 							type="text"
 							disabled={disabled}
 						/>
@@ -81,7 +72,7 @@ class Pill extends React.Component {
 
 					<Field label="Medication">
 						<input
-							id={inputName + "-medication"}
+							name={accessName + "-medication"}
 							type="text"
 							disabled={disabled}
 						/>
@@ -91,7 +82,5 @@ class Pill extends React.Component {
 		)
 	};
 };
-
-// Pill.propTypes = {}
 
 export default Pill;
