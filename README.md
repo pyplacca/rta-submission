@@ -1,5 +1,5 @@
 # RTA Submission
-Submission of react team assessment
+Submission of **R**eact **T**eam **A**ssessment
 
 ## Demo
 - [Report page](https://rta-sub.netlify.app/report)
