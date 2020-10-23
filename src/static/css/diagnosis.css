@@ -1,0 +1,126 @@
+input,
+select {
+	padding: var(--gap);
+	border: 1px solid #dcdbe2;
+	border-radius: calc(var(--radius) * .5);
+}
+
+input[disabled] {
+	background-color: #ebeaf1;
+}
+
+input[type="file"]{
+	border-style: dashed;
+	border-spacing: 2;
+	padding: calc(var(--gap-x2) * 2) var(--gap);
+}
+/*
+input[type="file" ]::after {
+	content: "Hello input";
+	text-align: center;
+}*/
+
+input[type="file" i]::-webkit-file-upload-button {
+	visibility: hidden;
+}
+
+.Diagnosis {
+	/*display: flex;*/
+	background-color: var(--bg1);
+}
+
+.Diagnosis .page-form {
+	max-width: var(--mxw);
+	margin: auto;
+	padding: var(--gap-x3);
+}
+
+.page-form .heading {
+	padding: var(--gap-x3);
+	margin-bottom: var(--gap-x3);
+}
+
+.page-form .sidebar {
+	margin-right: var(--gap);
+	width: clamp(270px, 22%, 400px);
+}
+
+.page-form .sidebar .tab {
+	padding: var(--gap-x3);
+	background-color: inherit;
+	color: var(--fg-primary);
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	cursor: pointer;
+}
+
+.page-form .sidebar .tab.active {
+	background-color: var(--sea-green);
+	color: #fff;
+}
+
+.page-form .pill-category {
+	--spacing: calc(var(--gap-x3) * 2);
+	border-bottom: 3px solid #000;
+	padding-bottom: var(--spacing);
+	margin-bottom: var(--spacing);
+}
+
+.page-form .pill-category .caption {
+	margin-bottom: var(--gap);
+}
+
+.page-form .form-section {
+	flex-grow: 1;
+	padding: var(--gap-x2);
+}
+
+.page-form .form-section {
+}
+
+.page-form .form-section .pill {
+	background-color: var(--pill-bg);
+	padding: var(--gap-x2);
+	cursor: pointer;
+}
+
+.page-form .pill-category .extras,
+.page-form .form-section .fields {
+	padding: var(--gap-x3);
+}
+
+.page-form .pill-category .extras > * {
+	width: 45%;
+	border-radius: var(--radius);
+}
+
+.page-form .pill-category .extras > *:first-child {
+	align-self: flex-end;
+}
+
+.page-form .form-section .fields.collapsed {
+	display: none;
+}
+
+.page-form .form-section .fields > *:not(_last-child) {
+	margin-bottom: var(--gap-x2);
+}
+
+.page-form .form-section .fields select {
+	max-width: 270px;
+}
+
+.page-form .form-section .input-field label {
+	margin-bottom: var(--gap);
+	font-weight: 600;
+	font-size: .9rem;
+}
+
+.page-form .form-section .form-buttons button[type="submit"] {
+	background-color: var(--sea-green);
+	color: #fff;
+}
+
