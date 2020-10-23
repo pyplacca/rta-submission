@@ -1,9 +1,10 @@
 :root {
+	--mxw: 1440px;
 	--gap: .5rem;
 	--gap-x2: calc(var(--gap) * 2);
 	--gap-x3: calc(var(--gap) * 3);
 	--pill-bg: #e3eaef;
-	--fg-primary: #bebbc1;
+	--fg-primary: #bfbcc1;
 	--sea-green: #02c0ce;
 	--sea-green-2: #06d0f2;
 	--bg1: #f7f5ff;
@@ -23,12 +24,45 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+th,
+td,
+button,
+input,
+select {
 	font-family: 'Open Sans';
 }
 
-p {
+p,
+button,
+input,
+select,
+th,
+td {
 	font-weight: 300;
+	font-size: .95rem;
+}
+
+button {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: none;
+	padding: var(--gap) var(--gap-x2);
+	margin: 0 calc(var(--gap) * .5);
+	border-radius: calc(var(--radius) * .5)
+}
+
+svg.feather {
+	--size: 17px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	width: var(--size);
+	height: var(--size);
+	margin-right: var(--gap);
 }
 
 .text-large {
@@ -36,10 +70,11 @@ p {
 }
 
 .text-medium {
-	font-weight: 400;
+	font-weight: 500;
 }
 
 .text-normal {
+	font-weight: 300;
 }
 
 .flex,
@@ -79,4 +114,27 @@ p {
 
 .Panel {
 	background-color: #fff;
+}
+
+
+/* Components */
+
+.PageNav {
+	padding: var(--gap-x2);
+}
+
+.PageNav .user-profile {
+	margin-left: auto;
+}
+
+.PageNav .user-profile > *:not(:last-child) {
+	margin-right: var(--gap);
+}
+
+.PageNav .user-profile .profile-image {
+	--size: 40px;
+	border-radius: 50%;
+	height: var(--size);
+	width: var(--size);
+	object-fit: cover;
 }
