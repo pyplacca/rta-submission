@@ -24,7 +24,7 @@ function DiagnosisForm (props) {
 	const handleSubmission = event => {
 		event.preventDefault();
 		const {elements} = event.target;
-		// group results
+		// group data received from form
 		const formData = [...elements].reduce((output, {name, value}) => {
 			const [key, subKey] = name.split('-');
 			if (!subKey) {

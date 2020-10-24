@@ -53,19 +53,19 @@ function Report (props) {
 					<div className="tabs flex jcsb">
 						{
 							[
-								['User Profile', <Icons.user />],
-								['Goal Tracking', <Icons.xOctagon />],
-								['Appointments', <Icons.calendar />],
-								['Selections', <Icons.file />],
-								['Finance', <Icons.briefcase />],
-								['Settings', <Icons.settings />],
+								['User Profile', <Icons.user/>],
+								['Goal Tracking', <Icons.xOctagon/>],
+								['Appointments', <Icons.calendar/>],
+								['Selections', <Icons.file/>],
+								['Finance', <Icons.briefcase/>],
+								['Settings', <Icons.settings/>],
 							].map((item, i) => {
-								const [text, iconName] = item,
+								const [text, icon] = item,
 								name = text.toLowerCase().replace(/\s/g, '-');
 								return <Tab
 									text={text}
 									name={name}
-									icon={iconName}
+									icon={icon}
 									key={i}
 									className={active === name ? 'active' : ''}
 									clickCallback={setActive}
@@ -106,11 +106,11 @@ function Report (props) {
 							]}
 							rows={[
 								['Diabetes',
-								dbs.status, dbs.yearOfDiagnosis, dbs.type, dbs.medication],
+								dbs.status, dbs.diagnosisYear, dbs.diagnosisType, dbs.medication],
 								['Hypertension',
-								hyp.status, hyp.yearOfDiagnosis, hyp.type, hyp.medication],
+								hyp.status, hyp.diagnosisYear, hyp.diagnosisType, hyp.medication],
 								['Thyroid',
-								thy.status, thy.yearOfDiagnosis, thy.type, thy.medication],
+								thy.status, thy.diagnosisYear, thy.diagnosisType, thy.medication],
 							]}
 						/>
 						<BottomRow
